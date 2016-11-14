@@ -40,16 +40,20 @@ Some questions/issues that motivated the project are:
 3. Managing, storing, and further cleaning the data:
     - I created lists with the data of banks names, demand deposits and risks and furthered cleaned the data using 'Pandas' methods, regular expressions, etc.
     - I used 'Pandas' to create a data frame with the information of banks, demand deposits, log demand deposits and risks.
-    - The complete database or data frame in csv format is available [here](base_completa.csv)
-    - There was an importan outlier that was identified and droped using the .drop and .index methods.  
-
+    - The complete database or data frame in csv format is available [here](base_completa)
+    - There was an important outlier that was identified and droped using the .drop and .index methods.
+<br><br>
+4. Analysing data
+    - I used the numpy, math and statsmodels.formula.api libraries to make mathematical operations and run statistical models.
+    - Also, I used matplotlib to create figures.
+    
 ## Findings
 
 All code for analysis is available [here](FinalAssignment_Jose_Astaiza.ipynb).
  
 - Two samples were analysed: the complete sample and the sample without the outlier. This was a strange value correspondig to risk. The  risk outlier is in the position 2768 of the complete data frame and is asociated to HSBC,Delaware (36197%,500.000$). It is important to notice that the second highest risk is just 868.6%.
 
-- Las estadísticas descriptivas de la base completa son:
+- The descriptive statistics of the complete data base are:
 <pre>
              Riesgo      Depositos  LogDepositos
 count   6058.000000    6058.000000   6058.000000
@@ -61,7 +65,7 @@ min        1.594700       0.000000     -4.605170
 75%       19.728750      55.820250     17.837647
 max    36197.297300  258094.000000     26.276590 
 </pre>
-- Las estadísticas descriptivas de la base sin outlier son:
+- The descriptive statistics of the data base without the outlier are:
 <pre>
             Riesgo      Depositos  LogDepositos
 count  6057.000000    6057.000000   6057.000000
@@ -74,6 +78,65 @@ min       1.594700       0.000000     -4.605170
 max     868.623800  144521.000000     25.696691
 </pre>
 
+- The linear relation between demand deposits and risks according to the entire sample is:
+<pre>
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              Depositos   R-squared:                       0.550
+Model:                            OLS   Adj. R-squared:                  0.550
+Method:                 Least Squares   F-statistic:                     7413.
+Date:                Mon, 14 Nov 2016   Prob (F-statistic):               0.00
+Time:                        15:16:20   Log-Likelihood:                -57343.
+No. Observations:                6058   AIC:                         1.147e+05
+Df Residuals:                    6056   BIC:                         1.147e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+Intercept     71.8779     40.197      1.788      0.074        -6.923   150.679
+Riesgo         7.4239      0.086     86.098      0.000         7.255     7.593
+==============================================================================
+Omnibus:                    16507.981   Durbin-Watson:                   1.994
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        413211942.356
+Skew:                          33.826   Prob(JB):                         0.00
+Kurtosis:                    1280.672   Cond. No.                         467.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+</pre>
+
+- The linear relation between demand deposits and risks according to the sample without the outlier is (observe that the R-squared notably increases):
+<pre>
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              Depositos   R-squared:                       0.659
+Model:                            OLS   Adj. R-squared:                  0.659
+Method:                 Least Squares   F-statistic:                 1.170e+04
+Date:                Mon, 14 Nov 2016   Prob (F-statistic):               0.00
+Time:                        15:16:24   Log-Likelihood:                -54362.
+No. Observations:                6057   AIC:                         1.087e+05
+Df Residuals:                    6055   BIC:                         1.087e+05
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+Intercept  -1775.1024     30.714    -57.795      0.000     -1835.312 -1714.893
+Riesgo       102.5688      0.948    108.184      0.000       100.710   104.427
+==============================================================================
+Omnibus:                    13365.358   Durbin-Watson:                   2.014
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):        135899781.270
+Skew:                          19.864   Prob(JB):                         0.00
+Kurtosis:                     735.738   Cond. No.                         40.5
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+</pre>
 
 Here some visualizations of key findings:
 
