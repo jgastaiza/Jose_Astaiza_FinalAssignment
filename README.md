@@ -32,27 +32,48 @@ Some questions/issues that motivated the project are:
         - Demand deposits:  http://www.usbanklocations.com/bank-rank/demand-deposits---totaldeposits--td-ddt.html
         - Tier 1 capital ratio: www.usbanklocations.com/bank-rank/tier-1-risk-based-capital-ratio---performanceratios--pcr-rbc1rwaj.html
     - To scrape the two websites I used the 'BeautifulSoup' library.
-    - The whole Python code is available [here](scraper_batches_1-2.ipynb) and [here for batch 3](scraper_batch_3.ipynb).
+    - The whole Python code is available [here](FinalAssignment_Jose_Astaiza.ipynb)
 <br><br>
 2. Extracting the data from 'BeatifulSoup' objects:
-    - Both to scrape the raw text and to extract the data from it, I wrote helper functions to: get htmls; get urls to speeches; get year, month, and day information from the text; get the title of the speech; remove html tags; and get the location of the speech; get all the elements of a speech in a structured object.
-    - Helper functions are available [here](scraper_helper.ipynb).
+    - Both to scrape the raw text and to extract the data from it, I wrote codes to get urls to deposits and risks; get the names of banks; remove unnecesary symbols; transform the string digits into floats; get the names sorted alphabetically mantaining for each bank the corresponding data.
 <br><br>
 3. Managing, storing, and further cleaning the data:
-    - I used 'Pandas' to create a data frame for each batch of speeches, and exported each to a 'pickle' file for storage.
-    - I consolidated the three data frames into one and furthered cleaned the data using 'Pandas' methods, 'string' methods, regular expressions, etc.
-    - Using 'string' and 'nltk' libraries I stripped speeches from punctuation, converted to lowercase, tokenized text, dropped stopwords (in Spanish), etc.
-    - Code is available in [here](consolidate_clean.ipynb).
-
+    - I created lists with the data of banks names, demand deposits and risks and furthered cleaned the data using 'Pandas' methods, regular expressions, etc.
+    - I used 'Pandas' to create a data frame with the information of banks, demand deposits, log demand deposits and risks.
+    - The complete database or data frame in csv format is available [here](base_completa)
+    - There was an importan outlier that was identified and droped using the .drop and .index methods.  
 
 ## Findings
 
-All code for analysis available [here](speeches_analysis.ipynb).
+All code for analysis is available [here](FinalAssignment_Jose_Astaiza.ipynb).
+ 
+- Two samples were analysed: the complete sample and the sample without the outlier. This was a strange value correspondig to risk. The  risk outlier is in the position 2768 of the complete data frame and is asociated to HSBC,Delaware (36197%,500.000$). It is important to notice that the second highest risk is just 868.6%.
 
-- Number of unique speeches: 2,651.
-- Number of days in office: 2,041.
-- Number of days in which at least one speech was given: 1,442
-- Maximum number of speeches in a day: 6 (twice)
+- Las estadísticas descriptivas de la base completa son:
+<pre>
+             Riesgo      Depositos  LogDepositos
+count   6058.000000    6058.000000   6058.000000
+mean      25.402773     260.465357     16.823795
+std      465.535237    4658.603264      2.944915
+min        1.594700       0.000000     -4.605170
+25%       12.478850      12.457000     16.337793
+50%       15.109700      25.842000     17.067512
+75%       19.728750      55.820250     17.837647
+max    36197.297300  258094.000000     26.276590 
+</pre>
+- Las estadísticas descriptivas de la base sin outlier son:
+<pre>
+            Riesgo      Depositos  LogDepositos
+count  6057.000000    6057.000000   6057.000000
+mean     19.430857     217.897496     16.822234
+std      25.922823    3275.228433      2.942652
+min       1.594700       0.000000     -4.605170
+25%      12.478500      12.457000     16.337793
+50%      15.109400      25.839000     17.067396
+75%      19.724400      55.815000     17.837553
+max     868.623800  144521.000000     25.696691
+</pre>
+
 
 Here some visualizations of key findings:
 
