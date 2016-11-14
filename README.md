@@ -40,7 +40,7 @@ Some questions/issues that motivated the project are:
 3. Managing, storing, and further cleaning the data:
     - I created lists with the data of banks names, demand deposits and risks and furthered cleaned the data using 'Pandas' methods, regular expressions, etc.
     - I used 'Pandas' to create a data frame with the information of banks, demand deposits, log demand deposits and risks.
-    - The complete database or data frame in csv format is available [here](base_completa)
+    - The complete database or data frame in csv format is available [here](base_completa.csv)
     - There was an importan outlier that was identified and droped using the .drop and .index methods.  
 
 ## Findings
