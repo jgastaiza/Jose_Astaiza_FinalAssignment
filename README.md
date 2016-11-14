@@ -51,7 +51,7 @@ Some questions/issues that motivated the project are:
 
 All code for analysis is available [here](FinalAssignment_Jose_Astaiza.ipynb).
  
-- Two samples were analysed: the complete sample and the sample without the outlier. This was a strange value correspondig to risk. The  risk outlier is in the position 2768 of the complete data frame and is asociated to HSBC,Delaware (36197%,500.000$). It is important to notice that the second highest risk is just 868.6%.
+- Two samples were analysed: the complete sample and the sample without the outlier. This was a strange value correspondig to risk. The  risk outlier is in the position 2768 of the complete data frame and is asociated to HSBC,Delaware (36197%). It is important to notice that the second highest risk is just 868.6%.
 
 - The descriptive statistics of the complete data base are:
 <pre>
@@ -140,20 +140,28 @@ Warnings:
 
 Here some visualizations of key findings:
 
-<img src="images/hist_daily.png">
+<img src="figures/figure_1.png">
 
-<img src="images/line_month.png">
+<img src="figures/figure_2.png">
 
 The vertical blue line indicates the month in which the Law of Electoral Guarantees was enacted. This law limited the President's  interventions, as he announced running for reelection.
 
-<img src="images/paz_terroristas_month.png">
+<img src="figures/figure_3.png">
 
 The vertical blue line indicates the official start of peace talks with FARC.
 
-<img src="images/topics_total.png">
+<img src="figures/figure_4.png">
 
-<img src="images/dispersion1.png">
+<img src="figures/figure_5.png">
 
-<img src="images/dispersion2.png">
+<img src="figures/figure_6.png">
+
+<img src="figures/figure_7.png">
+
+<img src="figures/figure_8.png">
+
+<img src="figures/figure_9.png">
+
+<img src="figures/figure_10.png">
 
 ---
