@@ -5,39 +5,34 @@
 
 Noviembre-2016
 
-<img src="Jose_Astaiza_FinalAssignment/figures/intro.jpg">
+<img src="/figures/intro.jpg">
 
 ---
 
 ## Description and motivation
 
-Colombia’s Presidency makes public on its website the interventions/speeches that current President Juan Manuel Santos has given since he came to office in August 2010. For this project I scraped those texts (over 2,600 speeches) and analyzed them using text analysis tools in Python.
+USBankLocations.com makes public a compilation of statistics about Tier 1 risk-based capital ratios for all US banks, as well as a compilation of demand deposits statistics for each bank. These statistics are originally collected by various government agencies and USBankLocations.com obtain the data from these government agencies under the Freedom of Information Act. 
+
+For this project I scraped those statistics, which include 6058 banks, and analyzed them using Python.  
 
 Some questions/issues that motivated the project are:
 
-- President Santos is trying to end a near 50-year-old conflict with left-wing guerilla FARC. There is an ongoing peace process that started in October 2012. Does the data reflect that in any way?
-- President’s in Colombia can be reelected for one four-year period, for a maximum of eight years in office. President Santos was reelected in mid 2014. As is typical, prior to elections a Law for Electoral Guarantees was enacted. That law limited the type of political events that President Santos could hold, such as inaugurations of public works. Does the data reflect that in any way?
-- The right-wing opposition, led by Ex-President Alvaro Uribe, has fiercely attacked Santos’ government and the peace process in particular. Juan Manuel Santos was Uribe’s Defense Minister and got elected with the support of the Ex-President. To the face of the public they have distanced dramatically over the past six years. Does the data reflect that in any way?
-- What is the relative importance of policy areas, in terms of mentions of key words, such as education, entrepreneurship, employment, poverty, innovation, etc.?
-- How does the data reflect specific events such us the recent decrease in oil prices, the depreciation of the COP, the soccer World Cup, etc.
-- What do basic descriptive statistics of the data tell us about the President's interventions.
-
-
-
-
-
-
+- In the process of issuing deposits and granting loans, financial institutions transform assets characterized by short maturities, small amounts and low risks (deposits) into assets of longer maturities, greater amounts and higher risks (loans).
+- Since an important fraction of the illiquid loans of banks are financed through the demand deposits of the uninformed public, then there is always the possibility that depositors excessively withdraw their deposits (i.e., the possibility of a bank run) and the bank face both a liquidity shortage and a higher probability of failure.
+- Although bank runs could have a speculative cause, they could also have a fundamental cause, i.e., they could be caused by the bank asset quality.
+- The tier 1 capital ratio is the comparison between a banking firm's core equity capital and its total risk-weighted assets. A firm's core equity capital is known as its tier 1 capital and is the measure of a bank's financial strength based on the sum of its equity capital and disclosed reserves, and sometimes non-redeemable, non-cumulative preferred stock. A firm's risk-weighted assets include all assets that the firm holds that are systematically weighted for credit risk.
+- What do basic descriptive statistics of the data tell us about the risks of US banks?
+- What do basic descriptive statistics of the data tell us about the deposits of US banks?
+- Is there a clear relation between the risks and the level of deposits in the United States?
 
 ## Methods used
 
 1. Scraping
-    - The President’s speeches are available online in three batches, from three different websites.
-        - Batch 1: from 08/07/2010 to 08/06/2014 (1,873 speeches): http://wsp.presidencia.gov.co/Discursos
-        - Batch 2: from 08/07/2014 to 12/12/2015 (678 speeches): http://wp.presidencia.gov.co/Discursos
-        - Batch 3: Most recent ones –last date of scraping: 03/13/2016– (118 speeches): http://es.presidencia.gov.co/discursos
-    - To scrape the two batches of older speeches I used the 'requests' and 'BeautifulSoup' libraries.
-    - The recent batch is available in a JavaScript rendered site. I extracted all the available speeches using 'selenium' library and 'webdriver' with Chrome.
-    - The Python code is available [here for batches 1 and 2](scraper_batches_1-2.ipynb) and [here for batch 3](scraper_batch_3.ipynb).
+    - For each bank, the data of demand deposits and the tier 1 capital ratios are available online in the two following websites.
+        - Demand deposits:  http://www.usbanklocations.com/bank-rank/demand-deposits---totaldeposits--td-ddt.html
+        - Tier 1 capital ratio: www.usbanklocations.com/bank-rank/tier-1-risk-based-capital-ratio---performanceratios--pcr-rbc1rwaj.html
+    - To scrape the two websites I used the 'BeautifulSoup' library.
+    - The whole Python code is available [here](scraper_batches_1-2.ipynb) and [here for batch 3](scraper_batch_3.ipynb).
 <br><br>
 2. Extracting the data from 'BeatifulSoup' objects:
     - Both to scrape the raw text and to extract the data from it, I wrote helper functions to: get htmls; get urls to speeches; get year, month, and day information from the text; get the title of the speech; remove html tags; and get the location of the speech; get all the elements of a speech in a structured object.
