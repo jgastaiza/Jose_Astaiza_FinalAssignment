@@ -79,6 +79,7 @@ max     868.623800  144521.000000     25.696691
 </pre>
 
 - The linear relation between demand deposits and risks according to the entire sample is:
+
 <pre>
                             OLS Regression Results                            
 ==============================================================================
@@ -105,10 +106,10 @@ Kurtosis:                    1280.672   Cond. No.                         467.
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
 </pre>
 
-- The linear relation between demand deposits and risks according to the sample without the outlier is (observe that the R-squared notably increases):
+- The linear relation between demand deposits and risks according to the sample without the outlier is (observe that the R-squared and the slope notably increase):
+
 <pre>
                             OLS Regression Results                            
 ==============================================================================
@@ -135,7 +136,6 @@ Kurtosis:                     735.738   Cond. No.                         40.5
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
 </pre>
 
 Here some visualizations of key findings:
