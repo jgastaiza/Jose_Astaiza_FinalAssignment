@@ -5,7 +5,7 @@
 
 Noviembre-2016
 
-<img src="Jose_Astaiza_FinalAssignment/figures/intro.jpgl"
+<img srcl="Jose_Astaiza_FinalAssignment/figures/intro.jpg">
 
 ---
 
