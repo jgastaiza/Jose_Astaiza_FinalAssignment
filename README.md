@@ -1,11 +1,11 @@
 
-# Análisis de la relación entre el riesgo asumido por los bancos y su nivel de depósitos
+# Analysis of the relation between demand deposits and risks in the American banking sector
 
 [José Gabriel Astaiza]
 
 Noviembre-2016
 
-<img src="wordcloud/wordcloud.png">
+<img src="wordcl
 
 ---
 
