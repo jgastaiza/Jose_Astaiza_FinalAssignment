@@ -144,11 +144,7 @@ Here some visualizations of key findings:
 
 <img src="figures/figure_2.png">
 
-The vertical blue line indicates the month in which the Law of Electoral Guarantees was enacted. This law limited the President's  interventions, as he announced running for reelection.
-
 <img src="figures/figure_3.png">
-
-The vertical blue line indicates the official start of peace talks with FARC.
 
 <img src="figures/figure_4.png">
 
