@@ -5,7 +5,7 @@
 
 Noviembre-2016
 
-<img src="wordcl
+<img src="Jose_Astaiza_FinalAssignment/figures/intro.jpgl"
 
 ---
 
