@@ -1,0 +1,21 @@
+Since an important fraction of the illiquid loans of banks are financed through the demand deposits of 
+the uninformed public, then there is always the possibility that depositors excessively withdraw their 
+deposits (i.e., the possibility of a bank run) and the bank face both a liquidity shortage and a higher 
+probability of failure. These bank runs could have a fundamental cause, i.e., they could be caused by 
+the bank asset quality. See for example Karas, Pyle and Schoors (2013), Martinez-Peria & Schmukler(2010),
+Flannery & Sorescu (1996). Then, I want to investigate how banks’ risks behave and how are they 
+associated to deposits. 
+
+To do so, I plan to use Beautifulsoup and Regex in Python to scrape information about banks. This 
+includes scraping banks’ names, risk data and deposits data. Also, I will use Pandas so that I can have
+a data base in which each bank is associated to a risk and deposit level, and if necessary I will clean
+the data looking for missings or atypical values.
+ 
+Of course, I will export the data to a .cvs file for replication.
+
+After having the appropriate data, I plan to use mathematical, statistical and graphical packages to 
+analyze the data such as math, numpy, matplotlib and others. This will help me to generate descriptive 
+statistics, visualize distributions and look for linear associations between the variables.
+
+At the end, I will be able to see how depositors are investing their money in terms of the risks that
+each bank involves, and how disperse are banks in terms of risks and size, measured by deposits.
