@@ -50,6 +50,7 @@ Some questions/issues that motivated the project are:
 5. Sharing the data
     - I created a blog using blogger and changed the html code to make the results avaliable and searchable to the public.
     - You can visit the blog at https://jgastaiza.blogspot.com.co/
+    - You can find this report at https://jgastaiza.blogspot.com.co/p/sector-bancario-estados-unidos.html
     
 ## Findings
 
