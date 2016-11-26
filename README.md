@@ -46,6 +46,10 @@ Some questions/issues that motivated the project are:
 4. Analysing data
     - I used the numpy, math and statsmodels.formula.api libraries to make mathematical operations and run statistical models.
     - Also, I used matplotlib to create figures.
+<br><br>
+5. Sharing the data
+    - I created a blog using blogger and changed the html code to make the results avaliable and searchable to the public.
+    - You can visit the blog at https://jgastaiza.blogspot.com.co/
     
 ## Findings
 
